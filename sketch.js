@@ -58,9 +58,7 @@ function draw() {
 
 function keyPressed() {
 
-	if (keyCode === DOWN_ARROW) {	
-		packageSprite.velocityY=5;
-	  }
+	 if (keyCode === DOWN_ARROW) { Matter.Body.setStatic(packageBody,false); } }
 	}
 
 
