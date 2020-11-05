@@ -17,6 +17,7 @@ function setup() {
 	
 
 	packageSprite=createSprite(width/2, 80, 10,10);
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	packageSprite.addImage(packageIMG)
 	packageSprite.scale=0.2
 
@@ -54,12 +55,7 @@ function draw() {
  
 }
 
-function keyPressed() {
- if (keyCode === DOWN_ARROW) {
-    // Look at the hints in the document and understand how to make the package body fall only on
-    
-  }
-}
+function keyPressed() { if (keyCode === DOWN_ARROW) { Matter.Body.setStatic(packageBody,false); }}
 
 
 
